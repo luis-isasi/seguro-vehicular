@@ -9,8 +9,6 @@ import logoRimac from '/public/img/logo-rimac.svg'
 const NewInsurance = () => {
   const isMobileAndTablet = useResponsive({ maxMediaQuery: MEDIAQUERY_LG })
 
-  console.log({ isMobileAndTablet })
-
   if (isMobileAndTablet) {
     return (
       <div className="bg-gray-light w-full h-58 md:h-64 px-5 py-5 flex justify-between items-center">
@@ -30,11 +28,11 @@ const NewInsurance = () => {
     )
   }
   return (
-    <div className="relative bg-gray-light h-full  flex flex-col ">
+    <div className="relative bg-gray-light h-full  flex flex-col">
       <figure className="absolute top-2 left-5 lg:left-10 z-2">
         <Image src={logoRimac} alt="logo-rimac" width={120} height={40} />
       </figure>
-      <div className="h-auto relative flex justify-center items-center ">
+      <div className="h-auto relative flex justify-center items-center">
         <figure className="w-full absolute top-0">
           <Image layout="responsive" src={MaskGroup} alt="ilustración-rimac" />
         </figure>

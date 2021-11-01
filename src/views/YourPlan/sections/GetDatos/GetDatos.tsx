@@ -1,8 +1,10 @@
-import { FormField, FormBtn } from '@Components/Form/components'
 import { useContextUser } from '@Context/contextUser'
+import FormGetDatos from './components/FormGetDatos'
 
-// 5. La obtención de la marca, año y modelo queda a criterio del desarrollador.
-const GetDatos = () => {
+interface Props {
+  onSuccess?: () => void
+}
+const GetDatos: React.FC<Props> = ({ onSuccess }) => {
   const { user } = useContextUser()
 
   return (
@@ -11,34 +13,7 @@ const GetDatos = () => {
         <p className="text-2xl text-center mb-4">
           Por favor, ingrese los siguientes datos 😀
         </p>
-        <form className="p-2 flex flex-col">
-          <FormField
-            name="name"
-            placeholder="Nombre"
-            value=""
-            onChange={() => {}}
-          />
-          <FormField
-            name="marca"
-            placeholder="Marca"
-            value=""
-            onChange={() => {}}
-          />
-          <FormField
-            name="modelo"
-            placeholder="Modelo"
-            value=""
-            onChange={() => {}}
-          />
-          <FormField
-            type="number"
-            name="año"
-            placeholder="Año"
-            value=""
-            onChange={() => {}}
-          />
-          <FormBtn isDisable={false}>Continuar</FormBtn>
-        </form>
+        <FormGetDatos onSuccess={onSuccess} />
       </div>
     </div>
   )

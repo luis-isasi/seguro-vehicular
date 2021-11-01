@@ -22,8 +22,8 @@
       "@Hooks/*": ["src/hooks/*"],
       "@Constants": ["src/constants.ts"],
       "@Types": ["src/types.ts"],
-      "@Context/*": ["src/context/*"]
-      // "@Hoc/*": ["src/hoc/*"]
+      "@Context/*": ["src/context/*"],
+      "@Hoc/*": ["src/Hoc/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

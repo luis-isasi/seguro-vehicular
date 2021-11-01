@@ -1,8 +1,11 @@
-import React, { useState, useReducer } from 'react'
+import { useReducer } from 'react'
+import { useRouter } from 'next/router'
 
+import { useContextUser } from '@Context/contextUser'
 import { FormField, FormCheckedTerms, FormBtn } from './components'
-import type { FormAction, InitialState, StateForm } from './types'
-import { CLEAN_ERROR, SET_ERROR, SET_FIELD, SET_STATE_FORM } from './constants'
+import type { User } from '@Types'
+import type { FormAction, InitialState } from './types'
+import { CLEAN_ERROR, SET_ERROR, SET_FIELD } from './constants'
 
 const initialState: InitialState = {
   dni: '',
@@ -48,8 +51,27 @@ const formReducer = (state: InitialState, action: FormAction) => {
 
 const Form = () => {
   const [state, dispatch] = useReducer(formReducer, initialState)
+  const { updateUser } = useContextUser()
+  const router = useRouter()
 
-  console.log({ state })
+  const onSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+
+    const newUser: User = {
+      name: '',
+      dni: state.dni,
+      phone: state.phone,
+      vehicle: {
+        marca: '',
+        model: '',
+        year: '',
+        placa: state.placa,
+      },
+    }
+
+    updateUser(newUser)
+    router.push('/yourplan')
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
@@ -156,7 +178,9 @@ const Form = () => {
         isChecked={state.isAceptTerms}
         onClick={handleCheckedTerms}
       />
-      <FormBtn isDisable={isDisabled()}>COTÍZALO</FormBtn>
+      <FormBtn type="submit" onClick={onSubmit} isDisable={isDisabled()}>
+        COTÍZALO
+      </FormBtn>
     </div>
   )
 }
