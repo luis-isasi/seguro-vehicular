@@ -6,7 +6,7 @@ import logoRimac from '/public/img/logo-rimac.svg'
 
 const NewInsurance = () => {
   return (
-    <div className="relative bg-[#ECF0FF] h-full  flex flex-col ">
+    <div className="relative bg-gray-light h-full  flex flex-col ">
       <figure className="absolute top-2 left-5 lg:left-10 z-2">
         <Image src={logoRimac} alt="logo-rimac" width={120} height={40} />
       </figure>

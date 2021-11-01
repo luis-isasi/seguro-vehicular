@@ -1,3 +1,4 @@
+import Form from '@Components/Form'
 import NewInsurance from './sections/NewInsurance'
 
 const Login = () => {
@@ -9,8 +10,11 @@ const Login = () => {
       >
         <NewInsurance />
       </div>
-      <div className="flex-grow" style={{ flexGrow: 2 }}>
-        <div>FORM</div>
+      <div
+        className="flex-grow flex justify-center items-center"
+        style={{ flexGrow: 2 }}
+      >
+        <Form />
       </div>
     </div>
   )
