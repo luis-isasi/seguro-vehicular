@@ -14,20 +14,20 @@ export async function fetcher<DataResponse>({
     'Content-Type': 'application/json',
   }
 
-  if (typeof window !== 'undefined') {
-    //TODO: agregar un type para user session
-    let token: string | undefined = ''
+  // if (typeof window !== 'undefined') {
+  //   //TODO: agregar un type para user session
+  //   let token: string | undefined = ''
 
-    // try {
-    //   //only there's a token in local storage
-    //   const tokenFromLS = window.localStorage.getItem(USER_SESSION)
-    //   token = JSON.parse(tokenFromLS)?.token
-    // } catch (err) {
-    //   console.error(err)
-    //   token = ''
-    // }
-    headers = { ...headers, Authorization: `Bearer ${token}` }
-  }
+  //   // try {
+  //   //   //only there's a token in local storage
+  //   //   const tokenFromLS = window.localStorage.getItem(USER_SESSION)
+  //   //   token = JSON.parse(tokenFromLS)?.token
+  //   // } catch (err) {
+  //   //   console.error(err)
+  //   //   token = ''
+  //   // }
+  //   headers = { ...headers, Authorization: `Bearer ${token}` }
+  // }
 
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}${endpoint}`,
