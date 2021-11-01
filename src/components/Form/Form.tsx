@@ -122,8 +122,10 @@ const Form = () => {
   }
 
   return (
-    <div className="w-76 flex flex-col items-center">
-      <p className="text-3xl text-center mb-8">Déjanos tus datos</p>
+    <div className="w-76 flex flex-col items-center px-4 sm:px-0">
+      <p className="text-2xl lg:text-3xl text-center mb-4 lg:mb-8">
+        Déjanos tus datos
+      </p>
       <form className="w-full flex flex-col">
         <FormField
           type="number"

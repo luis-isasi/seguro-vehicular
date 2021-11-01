@@ -100,6 +100,20 @@ module.exports = {
         20: '20px',
         24: '24px',
       },
+      flexGrow: {
+        DEFAULT: 0,
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        6: 6,
+        7: 7,
+        8: 8,
+        9: 9,
+        10: 10,
+      },
       zIndex: {
         '-2': '-2',
         '-4': '-4',
@@ -115,30 +129,6 @@ module.exports = {
         14: '14',
         16: '16',
         18: '18',
-      },
-      animation: {
-        float: 'float 4s ease-in-out infinite',
-        'appear-rotating': 'rotate 0.1s ease-in-out',
-        'fade-in': 'fadeIn 1.3s ease-in-out forwards',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(22px)' },
-        },
-        fadeIn: {
-          '0%': { opacity: 0 },
-          '50%': { opacity: 0.5 },
-          '100%': { opacity: 1 },
-        },
-        rotate: {
-          '0%': {
-            transform: 'rotate(90deg)',
-          },
-          '100%': {
-            transform: 'rotate(0deg)',
-          },
-        },
       },
       scale: {
         0: '0',

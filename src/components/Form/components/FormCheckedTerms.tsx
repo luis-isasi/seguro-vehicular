@@ -21,7 +21,7 @@ const FormCheckedTerms: React.FC<Props> = ({ isChecked, onClick, name }) => {
       >
         {isChecked ? <CheckIcon style={{ fontSize: '22px' }} /> : null}
       </button>
-      <p className="font-light text-sm text-gray-500">
+      <p className="font-light text-xs text-gray-500">
         Acepto la{' '}
         <u className="font-normal">
           Política de Protecciòn de Datos Personales
