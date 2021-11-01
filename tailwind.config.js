@@ -2,6 +2,7 @@ module.exports = {
   mode: 'jit',
   purge: ['./src/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
+  important: true,
   theme: {
     extend: {
       spacing: {
@@ -82,6 +83,9 @@ module.exports = {
         },
         red: {
           rimac: '#EF3340',
+        },
+        purple: {
+          primary: '#6F7DFF',
         },
       },
       borderRadius: {

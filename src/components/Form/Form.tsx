@@ -156,7 +156,7 @@ const Form = () => {
         isChecked={state.isAceptTerms}
         onClick={handleCheckedTerms}
       />
-      <FormBtn isDisable={isDisabled()} />
+      <FormBtn isDisable={isDisabled()}>COTÍZALO</FormBtn>
     </div>
   )
 }
