@@ -13,3 +13,5 @@ export type MediaQuery =
   | typeof MEDIAQUERY_LG
   | typeof MEDIAQUERY_XL
   | typeof MEDIAQUERY_2X1
+
+export interface User {}

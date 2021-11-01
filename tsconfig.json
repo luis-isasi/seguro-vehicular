@@ -21,8 +21,8 @@
       "@Views/*": ["src/views/*"],
       "@Hooks/*": ["src/hooks/*"],
       "@Constants": ["src/constants.ts"],
-      "@Types": ["src/types.ts"]
-      // "@Context/*": ["src/context/*"],
+      "@Types": ["src/types.ts"],
+      "@Context/*": ["src/context/*"]
       // "@Hoc/*": ["src/hoc/*"]
     }
   },

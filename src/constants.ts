@@ -1,7 +1,4 @@
-export {}
-
-// export const USER_SESSION = 'user_session'
-// export const USER_SETTINGS = 'user_settings'
+export const USER_SESSION = 'user_session'
 
 //MEDIA QUERYS
 export const MEDIAQUERY_SM = 640
