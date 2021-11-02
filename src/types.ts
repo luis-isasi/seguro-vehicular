@@ -4,7 +4,12 @@ import {
   MEDIAQUERY_LG,
   MEDIAQUERY_XL,
   MEDIAQUERY_2X1,
+  KEY_AROUND,
+  KEY_CAR,
+  KEY_PLAN,
 } from '@Constants'
+
+export type KeysCoverage = typeof KEY_AROUND | typeof KEY_CAR | typeof KEY_PLAN
 
 //Media Query
 export type MediaQuery =
@@ -19,6 +24,28 @@ export interface User {
   phone: string
   name: string
   vehicle: Vehicle
+  plan: Plan
+}
+
+export interface Plan {
+  amount: number
+  coverage: {
+    car: CoverageUser[]
+    around: CoverageUser[]
+    plan: CoverageUser[]
+  }
+}
+
+export interface CoverageData {
+  id: number
+  title: string
+  description: string
+  price: number
+  image?: string
+}
+
+export interface CoverageUser extends CoverageData {
+  isSelected: boolean
 }
 
 export interface Vehicle {

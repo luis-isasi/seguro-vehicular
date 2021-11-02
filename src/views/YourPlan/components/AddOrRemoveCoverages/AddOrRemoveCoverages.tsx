@@ -1,5 +1,10 @@
 import { useState } from 'react'
 
+import BtnCoverage from './components/Buttons/BtnCoverage'
+import ProtectYourCar from './components/ProtectYourCar'
+import ProtectRounded from './components/ProtectRounded'
+import ImproveYourPlan from './components/ImproveYourPlan'
+
 const PROTECT_CAR = 'PROTECT_CAR'
 const PROTECT_ROUNDED = 'PROTECT_ROUNDED'
 const PROTECT_PLAN = 'PROTECT_PLAN'
@@ -37,34 +42,33 @@ const AddOrRemoveCoverages = () => {
       <p className="mb-10">Agrega o Quita coverturas</p>
       <div>
         <div className="text-xs flex">
-          <button
+          <BtnCoverage
             name={PROTECT_CAR}
             onClick={handleClick}
-            className={`flex-grow-1 h-18 border-b-3 border-gray-300 ${
-              isOpenProtectCar && 'border-red-rimac'
-            }`}
+            isOpen={isOpenProtectCar}
           >
             PROTEGE A TU AUTO
-          </button>
-          <button
+          </BtnCoverage>
+          <BtnCoverage
             name={PROTECT_ROUNDED}
             onClick={handleClick}
-            className={`flex-grow-1 h-18 border-b-3 border-gray-300 ${
-              isOpenProtectRounded && 'border-red-rimac'
-            }`}
+            isOpen={isOpenProtectRounded}
           >
             PROTEGE A LOS QUE TE RODEAN
-          </button>
-          <button
+          </BtnCoverage>
+          <BtnCoverage
             name={PROTECT_PLAN}
             onClick={handleClick}
-            className={`flex-grow-1 h-18 border-b-3 border-gray-300 ${
-              isOpenProtectPlan && 'border-red-rimac'
-            }`}
+            isOpen={isOpenProtectPlan}
           >
             MEJORA TU PLAN
-          </button>
+          </BtnCoverage>
         </div>
+      </div>
+      <div>
+        {isOpenProtectCar && <ProtectYourCar />}
+        {isOpenProtectRounded && <ProtectRounded />}
+        {isOpenProtectPlan && <ImproveYourPlan />}
       </div>
     </div>
   )

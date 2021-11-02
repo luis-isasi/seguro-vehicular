@@ -1,4 +1,9 @@
 export const USER_SESSION = 'user_session'
+export const COVERAGES = 'coverages'
+
+export const KEY_PLAN = 'plan'
+export const KEY_AROUND = 'around'
+export const KEY_CAR = 'car'
 
 //MEDIA QUERYS
 export const MEDIAQUERY_SM = 640

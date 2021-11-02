@@ -67,6 +67,14 @@ const Form = () => {
         year: '',
         placa: state.placa,
       },
+      plan: {
+        amount: 20,
+        coverage: {
+          car: [],
+          around: [],
+          plan: [],
+        },
+      },
     }
 
     updateUser(newUser)
