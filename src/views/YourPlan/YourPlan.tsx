@@ -51,7 +51,7 @@ const YourPlan = () => {
             {isOpenGetDatos ? (
               <GetDatos onSuccess={onSuccessGetDatos} />
             ) : (
-              <ArmaTuPlan />
+              <ArmaTuPlan handleReturnStepGetDatos={handleOpenDatos} />
             )}
           </div>
         </div>

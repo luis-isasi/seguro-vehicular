@@ -103,7 +103,7 @@ const Form: React.FC<Props> = ({ onSuccess }) => {
         onChange={handleYear}
         errorMessage={state.errors.year}
       />
-      <FormBtn onClick={onSubmit} type="submit" isDisable={isDisabled()}>
+      <FormBtn onClick={onSubmit} type="submit" isDisabled={isDisabled()}>
         Continuar
       </FormBtn>
     </form>

@@ -6,17 +6,19 @@ import VehicleInfo from '@Views/YourPlan/components/VehicleInfo'
 import InsuredSum from '@Views/YourPlan/components/InsuredSum'
 import AddOrRemoveCoverages from '@Views/YourPlan/components/AddOrRemoveCoverages'
 
-const ConfigYourPlan = () => {
-  const { user } = useContextUser()
+interface Props {
+  handleReturnStepGetDatos: () => void
+}
 
-  const handleClick = () => {}
+const ConfigYourPlan: React.FC<Props> = ({ handleReturnStepGetDatos }) => {
+  const { user } = useContextUser()
 
   return (
     <section className="w-96 pt-10">
       <div className="border-b-2 border-gray-light pb-10 mb-10">
         <header className="mb-10">
           <div className="flex items-center mb-5">
-            <BtnCircle onClick={handleClick} className="mr-2">
+            <BtnCircle onClick={handleReturnStepGetDatos} className="mr-2">
               <KeyboardArrowLeftIcon style={{ fontSize: '20px' }} />
             </BtnCircle>
             <p className="text-gray-400 text-xs">VOLVER</p>
