@@ -46,14 +46,12 @@ const Coverage: React.FC<Props> = ({ coverage, keyCoverage }) => {
 
   const handleSelectCoverage = () => {
     if (isSelected) {
-      //remove coverage
       deleteCoverage({
         keyCoverage,
         idCoverage: coverage.id,
         priceCoverage: coverage.price,
       })
     } else {
-      //TODO: add coverage
       addCoverage({ coverage, keyCoverage })
     }
   }

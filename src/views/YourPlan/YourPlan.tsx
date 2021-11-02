@@ -23,9 +23,11 @@ const YourPlan = () => {
 
   return (
     <ProtectRoute>
-      <div className="h-screen">
-        <Header />
-        <div className="flex h-full">
+      <div className="h-screen flex flex-col">
+        <div className="w-full absolute top-0">
+          <Header />
+        </div>
+        <div className="flex h-full pt-12 md:pt-16">
           <div className="w-76 h-full bg-gray-lighter flex flex-col items-center">
             <BtnCircle
               onClick={handleOpenDatos}

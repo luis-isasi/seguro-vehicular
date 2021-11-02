@@ -6,8 +6,6 @@ import { KEY_CAR } from '@Constants'
 const ProtectYourCar = () => {
   const { user } = useContextUser()
 
-  console.log({ user })
-
   const renderCoverages = () => {
     return coverages.protectCar.map((coverage, index) => {
       const coveragesUser = user.plan.coverage.car

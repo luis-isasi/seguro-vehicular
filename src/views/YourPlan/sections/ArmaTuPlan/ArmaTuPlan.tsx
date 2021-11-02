@@ -7,8 +7,8 @@ interface Props {
 
 const ArmaTuPlan: React.FC<Props> = ({ handleReturnStepGetDatos }) => {
   return (
-    <div className="h-full flex ">
-      <div className="flex-grow-1 min-w-102 flex justify-center px-4 xl:px-0">
+    <div className="h-full flex">
+      <div className="flex-grow-1 overflow-y-auto scrool-none bg-scroolbar-white scroolbar min-w-102 flex justify-center px-4 xl:px-0">
         <ConfigYourPlan handleReturnStepGetDatos={handleReturnStepGetDatos} />
       </div>
       <div className="lg:w-72 xl:w-76 2xl:w-88 px-4">

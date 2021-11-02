@@ -9,7 +9,7 @@ const Header = () => {
   const isMobileAndTablet = useResponsive({ maxMediaQuery: MEDIAQUERY_MD })
 
   return (
-    <header className="w-full h-12 md:h-16 px-5 flex justify-between items-center border-b-1 border-gray-300">
+    <header className="w-full h-12 md:min-h-16 md:h-16 px-5 flex justify-between items-center border-b-1 border-gray-300">
       <figure className="">
         <Image src={logoRimac} alt="logo-rimac" width={120} height={40} />
       </figure>

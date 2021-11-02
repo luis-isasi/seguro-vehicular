@@ -19,8 +19,6 @@ const Form: React.FC<Props> = ({ onSuccess }) => {
     errors: { year: '' },
   })
 
-  console.log({ user })
-
   const onSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
 

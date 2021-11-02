@@ -7,4 +7,18 @@
   input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
   }
+
+  .scrool-none::-webkit-scrollbar {
+    -webkit-appearance: none;
+    @apply w-2 h-2;
+  }
+
+  .bg-scroolbar-white::-webkit-scrollbar-track {
+    @apply bg-white;
+  }
+
+  .scroolbar::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    @apply border border-solid border-white bg-gray-400;
+  }
 }
