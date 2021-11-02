@@ -1,14 +1,15 @@
 import { useState } from 'react'
 
-const InsuredSum = () => {
-  const [insuredSum, setInsuredSum] = useState<number>(14500)
+import { useContextUser } from '@Context/contextUser'
 
-  const increaseSum = () => {
-    setInsuredSum(insuredSum + 100)
-  }
-  const decreaseSum = () => {
-    setInsuredSum(insuredSum - 100)
-  }
+const InsuredSum = () => {
+  const {
+    increaseSum,
+    decreaseSum,
+    user: {
+      plan: { insuredSum },
+    },
+  } = useContextUser()
 
   return (
     <div className="flex justify-between">

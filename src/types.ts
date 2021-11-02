@@ -28,6 +28,7 @@ export interface User {
 }
 
 export interface Plan {
+  insuredSum: number
   amount: number
   coverage: {
     car: CoverageUser[]

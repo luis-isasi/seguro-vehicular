@@ -7,6 +7,8 @@ interface ContextUser {
   user: User
   updateUser: (user: User) => void
   isLoading: boolean
+  increaseSum: () => void
+  decreaseSum: () => void
   addCoverage: ({}: {
     coverage: CoverageUser
     keyCoverage: KeysCoverage
@@ -41,6 +43,25 @@ export const ContextUserProvider = ({ children }) => {
   const updateUser = (user: User) => {
     setUser(user)
     localStorage.setItem(USER_SESSION, JSON.stringify(user))
+  }
+
+  const increaseSum = () => {
+    setUser({
+      ...user,
+      plan: {
+        ...user.plan,
+        insuredSum: user.plan.insuredSum + 100,
+      },
+    })
+  }
+  const decreaseSum = () => {
+    setUser({
+      ...user,
+      plan: {
+        ...user.plan,
+        insuredSum: user.plan.insuredSum - 100,
+      },
+    })
   }
 
   const addCoverage = ({
@@ -91,7 +112,15 @@ export const ContextUserProvider = ({ children }) => {
 
   return (
     <ContextUser.Provider
-      value={{ user, updateUser, isLoading, addCoverage, deleteCoverage }}
+      value={{
+        user,
+        updateUser,
+        isLoading,
+        addCoverage,
+        deleteCoverage,
+        increaseSum,
+        decreaseSum,
+      }}
     >
       {children}
     </ContextUser.Provider>

@@ -68,6 +68,7 @@ const Form = () => {
         placa: state.placa,
       },
       plan: {
+        insuredSum: 14500,
         amount: 20,
         coverage: {
           car: [],
