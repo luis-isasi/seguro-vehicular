@@ -1,21 +1,10 @@
 import { useState } from 'react'
 
 import { FormField, FormBtn } from '@Components/Form/components'
-import type { StateFormGetData } from '../types'
+import type { StateFormGetData } from '../sections/GetDatos/types'
 import { useContextUser } from '@Context/contextUser'
 import { User } from '@/src/types'
 
-// const initialState: StateFormGetData = {
-//   name: '',
-//   marca: '',
-//   model: '',
-//   year: '',
-//   errors: {
-//     year: '',
-//   },
-// }
-
-//TODO: asegurarse que siempre halla un user
 interface Props {
   onSuccess?: () => void
 }

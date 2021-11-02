@@ -1,12 +1,10 @@
-import { useContextUser } from '@Context/contextUser'
-import FormGetDatos from './components/FormGetDatos'
+import FormGetDatos from '../../components/FormGetDatos'
 
 interface Props {
   onSuccess?: () => void
 }
-const GetDatos: React.FC<Props> = ({ onSuccess }) => {
-  const { user } = useContextUser()
 
+const GetDatos: React.FC<Props> = ({ onSuccess }) => {
   return (
     <div className="h-full flex flex-col justify-center items-center">
       <div className="w-80">

@@ -2,9 +2,9 @@ import Image from 'next/image'
 
 import useResponsive from '@Hooks/useResponsive'
 import { MEDIAQUERY_LG } from '@Constants'
-import Illustracion from '/public/img/Illustracion-desktop.svg'
-import MaskGroup from '/public/img/Mask-Group.svg'
-import logoRimac from '/public/img/logo-rimac.svg'
+import IllustracionURL from '/public/img/Illustracion-desktop.svg'
+import MaskGroupURL from '/public/img/Mask-Group.svg'
+import logoRimacURL from '/public/img/logo-rimac.svg'
 
 const NewInsurance = () => {
   const isMobileAndTablet = useResponsive({ maxMediaQuery: MEDIAQUERY_LG })
@@ -22,7 +22,7 @@ const NewInsurance = () => {
           </p>
         </div>
         <figure className=" relative top-4 sm:top-7 md:top-10">
-          <Image src={Illustracion} alt="ilustración-rimac" />
+          <Image src={IllustracionURL} alt="ilustración-rimac" />
         </figure>
       </div>
     )
@@ -30,14 +30,18 @@ const NewInsurance = () => {
   return (
     <div className="relative bg-gray-light h-full  flex flex-col">
       <figure className="absolute top-2 left-5 lg:left-10 z-2">
-        <Image src={logoRimac} alt="logo-rimac" width={120} height={40} />
+        <Image src={logoRimacURL} alt="logo-rimac" width={120} height={40} />
       </figure>
       <div className="h-auto relative flex justify-center items-center">
         <figure className="w-full absolute top-0">
-          <Image layout="responsive" src={MaskGroup} alt="ilustración-rimac" />
+          <Image
+            layout="responsive"
+            src={MaskGroupURL}
+            alt="street-ilustración-rimac"
+          />
         </figure>
         <figure className="relative top-20">
-          <Image src={Illustracion} alt="ilustración-rimac" />
+          <Image src={IllustracionURL} alt="ilustración-rimac" />
         </figure>
       </div>
       <div className="w-82 mx-auto relative top-40">

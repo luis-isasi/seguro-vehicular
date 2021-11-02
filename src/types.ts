@@ -18,10 +18,12 @@ export interface User {
   dni: string
   phone: string
   name: string
-  vehicle: {
-    marca: string
-    model: string
-    year: string
-    placa: string
-  }
+  vehicle: Vehicle
+}
+
+export interface Vehicle {
+  marca: string
+  model: string
+  year: string
+  placa: string
 }
