@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import { useContextUser } from '@Context/contextUser'
 
 const InsuredSum = () => {

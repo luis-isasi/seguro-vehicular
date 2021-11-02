@@ -46,20 +46,23 @@ export const ContextUserProvider = ({ children }) => {
   }
 
   const increaseSum = () => {
+    const newSum = user.plan.insuredSum + 100
     setUser({
       ...user,
       plan: {
         ...user.plan,
-        insuredSum: user.plan.insuredSum + 100,
+        insuredSum: newSum > 16500 ? 16500 : newSum,
       },
     })
   }
   const decreaseSum = () => {
+    const newSum = user.plan.insuredSum - 100
+
     setUser({
       ...user,
       plan: {
         ...user.plan,
-        insuredSum: user.plan.insuredSum - 100,
+        insuredSum: newSum < 12500 ? 12500 : newSum,
       },
     })
   }

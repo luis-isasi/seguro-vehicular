@@ -23,8 +23,7 @@
       "@Constants": ["src/constants.ts"],
       "@Types": ["src/types.ts"],
       "@Context/*": ["src/context/*"],
-      "@Hoc/*": ["src/Hoc/*"],
-      "@Utils": ["src/utils.ts"]
+      "@Hoc/*": ["src/Hoc/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
