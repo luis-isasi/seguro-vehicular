@@ -18,6 +18,7 @@ interface ContextUser {
     priceCoverage: number
     keyCoverage: KeysCoverage
   }) => void
+  resetUser: () => void
 }
 
 //we create context theme
@@ -113,6 +114,11 @@ export const ContextUserProvider = ({ children }) => {
     })
   }
 
+  const resetUser = () => {
+    setUser(null)
+    localStorage.removeItem(USER_SESSION)
+  }
+
   return (
     <ContextUser.Provider
       value={{
@@ -123,6 +129,7 @@ export const ContextUserProvider = ({ children }) => {
         deleteCoverage,
         increaseSum,
         decreaseSum,
+        resetUser,
       }}
     >
       {children}

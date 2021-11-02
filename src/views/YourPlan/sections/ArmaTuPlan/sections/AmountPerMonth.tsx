@@ -9,10 +9,16 @@ const CheckIconCustomer = () => (
 )
 
 const AmountPerMonth = () => {
-  const { user } = useContextUser()
+  const {
+    user: {
+      plan: { amount },
+    },
+    resetUser,
+  } = useContextUser()
   const router = useRouter()
 
   const handleGetInsurance = () => {
+    resetUser()
     router.push('/thanks')
   }
 
@@ -20,7 +26,7 @@ const AmountPerMonth = () => {
     <div className="relative top-20 text-gray-700">
       <div className="border-b-2 border-gray-300 py-7 mb-7">
         <p className="mb-2">MONTO</p>
-        <p className="text-4xl mb-2">$ {user.plan.amount}</p>
+        <p className="text-4xl mb-2">$ {amount}</p>
         <span className="mb-2">Mensuales</span>
       </div>
       <div>
