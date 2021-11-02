@@ -1,7 +1,8 @@
-import { useContextUser } from '@Context/contextUser'
+import { useRouter } from 'next/router'
 import CheckIcon from '@mui/icons-material/Check'
 
-import BtnPrimaryRed from '@Components/buttons/BtnPrimaryRed'
+import BtnPrimaryRed from '@/src/components/buttons/BtnPrimaryRed'
+import { useContextUser } from '@Context/contextUser'
 
 const CheckIconCustomer = () => (
   <CheckIcon className="text-green-300 mr-3" style={{ fontSize: '20px' }} />
@@ -9,6 +10,11 @@ const CheckIconCustomer = () => (
 
 const AmountPerMonth = () => {
   const { user } = useContextUser()
+  const router = useRouter()
+
+  const handleGetInsurance = () => {
+    router.push('/thanks')
+  }
 
   return (
     <div className="relative top-20 text-gray-700">
@@ -32,7 +38,9 @@ const AmountPerMonth = () => {
           </li>
         </ul>
       </div>
-      <BtnPrimaryRed>LO QUIERO AHORA</BtnPrimaryRed>
+      <BtnPrimaryRed onClick={handleGetInsurance}>
+        LO QUIERO AHORA
+      </BtnPrimaryRed>
     </div>
   )
 }
