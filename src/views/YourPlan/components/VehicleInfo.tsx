@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import IllustracionPersonURL from '/public/img/illustracion-person.svg'
+import IllustracionPersonURL from '@Public/img/illustracion-person.svg'
 
 import { Vehicle } from '@Types'
 

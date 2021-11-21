@@ -1,8 +1,8 @@
 import { CoverageData } from '@Types'
 
-import AtropelloImg from '/public/img/atropello.svg'
-import ChoqueImg from '/public/img/choque-luz-roja.svg'
-import LlantaRobadaImg from '/public/img/llanta-robada.svg'
+import AtropelloImg from '@Public/img/atropello.svg'
+import ChoqueImg from '@Public/img/choque-luz-roja.svg'
+import LlantaRobadaImg from '@Public/img/llanta-robada.svg'
 
 const coveragesCar: CoverageData[] = [
   {

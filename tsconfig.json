@@ -17,6 +17,7 @@
     "incremental": true,
     "paths": {
       "@/*": ["./*"],
+      "@Public/*": ["./public/*"],
       "@Components/*": ["src/components/*"],
       "@Views/*": ["src/views/*"],
       "@Hooks/*": ["src/hooks/*"],
@@ -26,6 +27,12 @@
       "@Hoc/*": ["src/Hoc/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "jest.config.js",
+    "jest.setup.js"
+  ],
   "exclude": ["node_modules"]
 }

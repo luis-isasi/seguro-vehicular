@@ -2,9 +2,9 @@ import Image from 'next/image'
 
 import useResponsive from '@Hooks/useResponsive'
 import { MEDIAQUERY_LG } from '@Constants'
-import IllustracionURL from '/public/img/Illustracion-desktop.svg'
-import MaskGroupURL from '/public/img/Mask-Group.svg'
-import logoRimacURL from '/public/img/logo-rimac.svg'
+import IllustracionURL from '@Public/img/Illustracion-desktop.svg'
+import MaskGroupURL from '@Public/img/Mask-Group.svg'
+import logoRimacURL from '@Public/img/logo-rimac.svg'
 
 const NewInsurance = () => {
   const isMobileAndTablet = useResponsive({ maxMediaQuery: MEDIAQUERY_LG })

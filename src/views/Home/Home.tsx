@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 import Header from '@Components/Header'
 import BtnPrimaryRed from '@Components/buttons/BtnPrimaryRed'
-import PersonURL from '/public/img/person-happy.svg'
-import MuebleURL from '/public/img/mueble.svg'
+import PersonURL from '@Public/img/person-happy.svg'
+import MuebleURL from '@Public/img/mueble.svg'
 
 const Home = () => {
   return (
